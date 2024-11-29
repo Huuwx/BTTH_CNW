@@ -5,7 +5,7 @@ $filename = "KTPM3_Danh_sach_diem_danh.csv";
 // Mảng chứa dữ liệu sinh viên
 $sinhvien = [];
 
-// Mở file CSV
+// Đọc dữ liệu từ tệp CSV
 if (($handle = fopen($filename, "r")) !== FALSE) {
     // Đọc dòng đầu tiên (tiêu đề)
     $headers = fgetcsv($handle, 1000, ",");
@@ -17,16 +17,13 @@ if (($handle = fopen($filename, "r")) !== FALSE) {
 
     fclose($handle);
 }
-
-// print_r($sinhvien);
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danh sách sinh viên</title>
-    <!-- Bootstrap CSS -->
+    <title>Bai3</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -36,12 +33,12 @@ if (($handle = fopen($filename, "r")) !== FALSE) {
             <thead class="table-dark">
                 <tr>
                     <th>ID</th>
-                    <th>Pass</th>
-                    <th>Họ</th>
-                    <th>Tên</th>
-                    <th>Lớp</th>
+                    <th>Password</th>
+                    <th>Fist Name</th>
+                    <th>Last Name</th>
+                    <th>city</th>
                     <th>Email</th>
-                    <th>Course</th>
+                    <th>course1</th>
                 </tr>
             </thead>
             <tbody>
@@ -49,7 +46,7 @@ if (($handle = fopen($filename, "r")) !== FALSE) {
                 // Hiển thị từng sinh viên
                 foreach ($sinhvien as $sv) {
                     echo "<tr>";
-                    echo "<td>" . (isset($sv['username']) ? $sv['username'] : "N/A") . "</td>";
+                    echo "<td>{$sv['username']}</td>";
                     echo "<td>{$sv['password']}</td>";
                     echo "<td>{$sv['lastname']}</td>";
                     echo "<td>{$sv['firstname']}</td>";
@@ -62,7 +59,6 @@ if (($handle = fopen($filename, "r")) !== FALSE) {
             </tbody>
         </table>
     </div>
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
