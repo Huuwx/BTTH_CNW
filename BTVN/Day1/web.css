@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* nav {
+    display: flex;
+    gap: 20px;
+} */
+
+/* nav a {
+    color: #000;
+    font-weight: normal;
+} */
+
+.container {
+    margin: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th,
+table td {
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.edit-icon,
+.delete-icon {
+    cursor: pointer;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.edit-icon {
+    color: #007bff;
+}
+
+.delete-icon {
+    color: #dc3545;
+}
+
+footer {
+    border-top: 3px solid black;
+    text-align: center;
+    margin-top: 70px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.footerTxt{
+    padding-top: 25px;
+    font-weight: bold;
+}

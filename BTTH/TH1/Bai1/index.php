@@ -132,7 +132,6 @@
     </div>
 
     <script>
-        // Khi click vào nút sửa, điền thông tin hoa vào form sửa
         document.querySelectorAll('[data-bs-target="#editFlowerModal"]').forEach(button => {
             button.addEventListener('click', function () {
                 const name = this.getAttribute('data-name');
@@ -147,7 +146,7 @@
     </script>
     <script>
     document.getElementById('addFlowerForm').addEventListener('submit', function (e) {
-        e.preventDefault(); // Ngăn form gửi dữ liệu mặc định (tránh tải lại trang)
+        e.preventDefault();
 
         const formData = new FormData(this);
 
@@ -158,7 +157,6 @@
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                // Tạo dòng mới cho bảng
                 const tableBody = document.querySelector('table tbody');
                 const newRow = `
                     <tr>
@@ -184,11 +182,9 @@
                 `;
                 tableBody.insertAdjacentHTML('beforeend', newRow);
 
-                // Đóng modal thêm hoa
                 const addModal = bootstrap.Modal.getInstance(document.getElementById('addFlowerModal'));
                 addModal.hide();
 
-                // Reset form
                 this.reset();
             } else {
                 alert('Thêm hoa thất bại: ' + data.message);
