@@ -32,13 +32,13 @@ if (($handle = fopen($filename, "r")) !== FALSE) {
         <table class="table table-bordered table-striped">
             <thead class="table-dark">
                 <tr>
-                    <th>ID</th>
+                    <th>Mã Sinh Viên</th>
                     <th>Password</th>
-                    <th>Fist Name</th>
-                    <th>Last Name</th>
-                    <th>city</th>
+                    <th>Họ Đệm</th>
+                    <th>Tên</th>
+                    <th>Lớp</th>
                     <th>Email</th>
-                    <th>course1</th>
+                    <th>Course</th>
                 </tr>
             </thead>
             <tbody>
