@@ -53,7 +53,7 @@ class IssueController extends Controller
             'operating_system' => $request->operating_system,
             'processor' => $request->processor,
             'memory' => $request->memory,
-            'available' => $request->available ?? false,
+            'available' => $request->has('available') ? true : false,
         ]);
 
         // Tạo vấn đề và liên kết với máy tính
@@ -67,7 +67,7 @@ class IssueController extends Controller
         ]);
 
         // Redirect sau khi lưu
-        return redirect()->route('issues.index')->with('success', 'Task và máy tính được tạo thành công.');
+        return redirect()->route('issues.index')->with('success', 'Issue và máy tính được tạo thành công.');
     }
 
     /**
@@ -114,7 +114,7 @@ class IssueController extends Controller
             'operating_system' => $request->operating_system,
             'processor' => $request->processor,
             'memory' => $request->memory,
-            'available' => $request->available ?? false,
+            'available' => $request->has('available') ? true : false,
         ]);
 
         // Cập nhật thông tin vấn đề
@@ -127,7 +127,7 @@ class IssueController extends Controller
         ]);
 
         // Redirect sau khi cập nhật
-        return redirect()->route('issues.index')->with('success', 'Task được cập nhật thành công.');
+        return redirect()->route('issues.index')->with('success', 'Issue được cập nhật thành công.');
     }
 
     /**
@@ -140,6 +140,6 @@ class IssueController extends Controller
 
         $computer->delete();
 
-        return redirect()->route('issues.index')->with('success', 'Task deleted successfully.');
+        return redirect()->route('issues.index')->with('success', 'Issue deleted successfully.');
     }
 }
