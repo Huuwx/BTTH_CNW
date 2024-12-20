@@ -5,11 +5,11 @@
 
     <h3>Thông tin Máy tính</h3>
     <p><strong>Tên máy tính:</strong> {{ $issue->computer->computer_name }}</p>
-    <p><strong>Model:</strong> {{ $issue->computer->model }}</p>
+    <p><strong>Tên Phiên Bản:</strong> {{ $issue->computer->model }}</p>
     <p><strong>Hệ điều hành:</strong> {{ $issue->computer->operating_system }}</p>
-    <p><strong>Vi xử lý:</strong> {{ $issue->computer->processor }}</p>
-    <p><strong>Bộ nhớ:</strong> {{ $issue->computer->memory }} GB</p>
-    <p><strong>Có sẵn:</strong> {{ $issue->computer->available ? 'Có' : 'Không' }}</p>
+    <p><strong>Bộ vi xử lý:</strong> {{ $issue->computer->processor }}</p>
+    <p><strong>Bộ nhớ RAM:</strong> {{ $issue->computer->memory }} GB</p>
+    <p><strong>Trạng Thái Hoạt Động:</strong> {{ $issue->computer->available ? 'Còn Hoạt Động' : 'Không Còn Hoạt Động' }}</p>
 
     <hr>
 

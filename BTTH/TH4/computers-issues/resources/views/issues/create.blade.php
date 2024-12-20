@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <div class="container">
-    <h1>Thêm mới Task</h1>
+    <h1>Thêm mới Vấn Đề</h1>
     <form action="{{ route('issues.store') }}" method="POST">
         @csrf
         <h3>Thông tin máy tính</h3>

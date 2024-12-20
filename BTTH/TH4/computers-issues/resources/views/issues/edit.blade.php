@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <div class="container">
-    <h1>Sửa Task</h1>
+    <h1>Sửa Vấn Đề</h1>
     <form action="{{ route('issues.update', $issue->id) }}" method="POST">
         @csrf
         @method('PUT')
