@@ -26,7 +26,7 @@
             <input type="number" class="form-control" id="memory" name="memory" required>
         </div>
         <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="available" name="available">
+            <input type="checkbox" class="form-check-input" id="available" name="available" value="1">
             <label class="form-check-label" for="available">Đang hoạt động</label>
         </div>
 

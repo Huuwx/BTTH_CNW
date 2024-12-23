@@ -34,7 +34,7 @@
         </div>
         <div class="form-group form-check">
             <input type="checkbox" class="form-check-input" id="available" name="available" 
-                   {{ $issue->computer->available ? 'checked' : '' }}>
+                   {{ $issue->computer->available ? 'checked' : '' }} value="1">
             <label class="form-check-label" for="available">Đang hoạt động</label>
         </div>
 
